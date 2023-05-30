@@ -1,7 +1,6 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: ['./tsconfig.json'],
     ecmaVersion: 2021,
     sourceType: 'module',
     ecmaFeatures: {
@@ -16,13 +15,13 @@ module.exports = {
     'plugin:jsx-a11y/strict',
     'plugin:import/recommended',
     'plugin:import/typescript',
-    'prettier/react',
     'plugin:prettier/recommended',
   ],
   rules: {
     "no-use-before-define": "error",
     "no-unused-vars": "error",
-    "indent": ["error", 2]
+    "indent": ["error", 2],
+    "react/react-in-jsx-scope": "off",
   },
   settings: {
     react: {

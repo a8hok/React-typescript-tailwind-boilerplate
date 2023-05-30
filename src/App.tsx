@@ -1,12 +1,11 @@
-import './App.css'
+import './App.css';
 
 function App() {
-
   return (
     <>
       <p>React Typescript and Tailwind Kick starter</p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

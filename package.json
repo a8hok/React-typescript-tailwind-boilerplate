@@ -2,7 +2,6 @@
   "name": "vite-project",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -10,8 +9,7 @@
     "type-check": "tsc --noEmit",
     "prettier": "prettier --write {src/**/*.tsx,src/**/*.ts}",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "pre-commit": "concurrently npm:type-check npm:lint"
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -34,16 +32,5 @@
     "prettier": "^2.8.8",
     "typescript": "^5.0.2",
     "vite": "^4.3.9"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run pre-commit"
-    }
-  },
-  "lint-staged": {
-    "*.ts?(x)": [
-      "eslint --fix",
-      "prettier --write"
-    ]
   }
 }
