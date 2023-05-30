@@ -1,7 +1,9 @@
 function App() {
   return (
     <>
-      <p>React Typescript and Tailwind Kick starter</p>
+      <p className="bg-TK-background">
+        React Typescript and Tailwind Kick starter
+      </p>
     </>
   );
 }
