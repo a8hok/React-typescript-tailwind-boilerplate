@@ -6,8 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit",
+    "prettier": "prettier --write {src/**/*.tsx,src/**/*.ts}",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "pre-commit": "concurrently npm:type-check npm:lint"
   },
   "dependencies": {
     "react": "^18.2.0",
